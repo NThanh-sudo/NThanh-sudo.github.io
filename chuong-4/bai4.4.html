@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bài 4.4</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 25px 40px;
+        }
+
+        /* Phần mô tả bài */
+        .de-bai {
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        /* Thanh Navs Tab */
+        .nav-tabs {
+            border-bottom: none;
+            margin-bottom: 25px;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+            color: #555;
+            padding: 8px 12px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .nav-tabs .nav-link:hover {
+            color: #222;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #222;
+            background-color: transparent;
+            border: none;
+            font-weight: 500;
+        }
+
+        /* Nội dung của tab */
+        .tab-content h2 {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .tab-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <!-- Nội dung đề bài -->
+        <div class="de-bai">
+            <strong>Bài 4.4:</strong>
+            Sử dụng thuộc tính data hoặc Javascript xây dựng Navs tab
+            cho phép người dùng chuyển đổi giữa các phần nội dung khác nhau.
+        </div>
+
+        <!-- Thanh điều hướng Tab -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+            <!-- Tab Trang chủ -->
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active"
+                    id="trangchu-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#trangchu"
+                    type="button"
+                    role="tab"
+                    aria-controls="trangchu"
+                    aria-selected="true">
+                    Trang chủ
+                </button>
+            </li>
+
+            <!-- Tab Kinh doanh -->
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="kinhdoanh-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#kinhdoanh"
+                    type="button"
+                    role="tab"
+                    aria-controls="kinhdoanh"
+                    aria-selected="false">
+                    Kinh doanh
+                </button>
+            </li>
+
+            <!-- Tab Công nghệ -->
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="congnghe-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#congnghe"
+                    type="button"
+                    role="tab"
+                    aria-controls="congnghe"
+                    aria-selected="false">
+                    Công nghệ
+                </button>
+            </li>
+
+        </ul>
+
+        <!-- Nội dung tương ứng với từng Tab -->
+        <div class="tab-content" id="myTabContent">
+
+            <!-- Nội dung Trang chủ -->
+            <div
+                class="tab-pane fade show active"
+                id="trangchu"
+                role="tabpanel"
+                aria-labelledby="trangchu-tab">
+
+                <h2>Trang chủ</h2>
+
+                <p>
+                    Chào mừng bạn đến với trang thông tin tổng hợp.
+                    Tại đây bạn có thể theo dõi những thông tin mới nhất
+                    về kinh doanh, công nghệ và đời sống.
+                </p>
+
+            </div>
+
+            <!-- Nội dung Kinh doanh -->
+            <div
+                class="tab-pane fade"
+                id="kinhdoanh"
+                role="tabpanel"
+                aria-labelledby="kinhdoanh-tab">
+
+                <h2>Kinh doanh</h2>
+
+                <p>
+                    Thị trường kinh doanh hôm nay có nhiều biến động.
+                    Giá vàng và các mặt hàng trên thị trường liên tục
+                    thay đổi theo tình hình kinh tế trong nước và thế giới.
+                </p>
+
+            </div>
+
+            <!-- Nội dung Công nghệ -->
+            <div
+                class="tab-pane fade"
+                id="congnghe"
+                role="tabpanel"
+                aria-labelledby="congnghe-tab">
+
+                <h2>Công nghệ</h2>
+
+                <p>
+                    Công nghệ ngày càng phát triển với nhiều sản phẩm
+                    và giải pháp mới. Các ứng dụng công nghệ đang được
+                    sử dụng rộng rãi trong học tập và đời sống.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
